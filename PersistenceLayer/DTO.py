@@ -8,7 +8,7 @@ class Employee:
         self.coff_stand = coff_stand
 
     def __str__(self):
-        return '(' + str(self.id) + ", '" + self.name + "', " + str(self.salary) + ", " + str(self.coff_stand) + ')'
+        return str((self.id, self.name, self.salary, self.coff_stand))
 
 class Supplayer:
     def __init__(self, id, name, cont_info):
@@ -17,7 +17,7 @@ class Supplayer:
         self.cont_info = cont_info
 
     def __str__(self):
-        return '(' + str(self.id) + ", '" + self.name + "', '" + self.cont_info + "')"
+        return str((self.id, self.name, self.cont_info))
 
 
 class Product:
@@ -28,7 +28,7 @@ class Product:
         self.quantity = quantity
 
     def __str__(self):
-        return '(' + str(self.id) + ", '" + self.description + "', " + str(self.price) + ", " + str(self.quantity) + ')'
+        return str((self.id, self.description, self.price, self.quantity))
 
 
 class Coffee_stand:
@@ -38,7 +38,7 @@ class Coffee_stand:
         self.number_of_employees = number_of_employees
 
     def __str__(self):
-        return '(' + str(self.id) + ", '" + self.location + "', " + str(self.number_of_employees) + ')'
+        return str((self.id, self.location, self.number_of_employees))
 
 
 class Activity:
@@ -49,7 +49,8 @@ class Activity:
         self.date = date
 
     def __str__(self):
-        return '(' + str(self.product_id) + ", " + str(self.quantity) + ", " + str(self.activator_id) + ", " + str(self.date) + ')'
+        return str((self.product_id, self.quantity, self.activator_id, self.date))
+
 
 class Employee_report:
     def __init__(self, name, salary, location, sum):
@@ -59,7 +60,7 @@ class Employee_report:
         self.sum = sum
 
     def __str__(self):
-        return '(' + self.name + ", " + str(self.salary) + ", " + self.location + ", " + str(self.sum) + ')'
+        return self.name + " " + str(self.salary) + " " + self.location + " " + str(self.sum)
 
 
 class Activities_report:
@@ -71,4 +72,4 @@ class Activities_report:
         self.quantity = quantity
 
     def __str__(self):
-        return '(' + str(self.date) + ", '" + self.description + "', " + str(self.quantity) + ", '"+ self.EmployeeName + "', '" + self.SupplyerName + "')"
+        return str((self.date, self.description, self.quantity, self.EmployeeName, self.SupplyerName))

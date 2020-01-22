@@ -1,5 +1,5 @@
 import sys
-from LogicLayer import printdb
+import printdb
 from PersistenceLayer.Repository import repo
 
 

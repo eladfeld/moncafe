@@ -13,7 +13,7 @@ class Employees:
     def get_all(self):
         cur = self.conn.cursor()
         all_employees = cur.execute("""
-        SELECT* FROM Products order by id
+        SELECT* FROM Employees order by id
         """).fetchall()
         return [Employee(*row) for row in all_employees]
 
@@ -109,7 +109,7 @@ class Activities:
     def get_activities_report(self):
         cur = self.conn.cursor()
         reports = cur.execute("""
-            SELECT act.date, P.description, act.quantity, ifnull(sup.name, 'none'), ifnull(emp.name, 'none')
+            SELECT act.date, P.description, act.quantity, sup.name, emp.name
             FROM Activities as act
             left outer join Products as P on act.product_id = P.id
             left outer join Suppliers as sup on sup.id = act.activator_id

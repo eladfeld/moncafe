@@ -9,7 +9,7 @@ def main():
     print('Coffee stands')
     for table in repo.Coffee_stands.get_all():
         print(table)
-    print('Employee')
+    print('Employees')
     for emp in repo.Employees.get_all():
         print(emp)
     print('Products')
@@ -18,11 +18,11 @@ def main():
     print('Suppliers')
     for sup in repo.Suppliers.get_all():
         print(sup)
-    print('Employees report')
+    print('\nEmployees report')
     for report in repo.Employees.get_emp_report():
         print(report)
     if len(repo.Activities.get_activities_report()) > 0:
-        print('Acticities')
+        print('\nActicities')
         for rep in repo.Activities.get_activities_report():
             print(rep)
 

@@ -1,6 +1,5 @@
 import atexit
 import sqlite3
-import os
 
 
 from PersistenceLayer.DAO import*
