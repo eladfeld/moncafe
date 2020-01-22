@@ -22,7 +22,7 @@ def main():
     for report in repo.Employees.get_emp_report():
         print(report)
     if len(repo.Activities.get_activities_report()) > 0:
-        print('\nActicities')
+        print('\nActivities')
         for rep in repo.Activities.get_activities_report():
             print(rep)
 
